@@ -759,4 +759,3 @@ void RTC_DS3231::forceConversion(void) {
       Wire.endTransmission();
     } while ((value & 0b00100000) != 0);
 } 
- 
