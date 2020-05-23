@@ -571,7 +571,7 @@ void RTC_DS3231::setAlarm(Ds3231_ALARM_TYPES_t alarmType, byte seconds, byte min
     if (alarmType & 0x01) seconds |= _BV(A1M1);
     if (alarmType & 0x02) minutes |= _BV(A1M2);
     if (alarmType & 0x04) hours |= _BV(A1M3);
-    if (alarmType & 0x10) hours |= _BV(DYDT);
+    if (alarmType & 0x10) daydate |= _BV(DYDT);
     if (alarmType & 0x08) daydate |= _BV(A1M4);
     
     if ( !(alarmType & 0x80) ) {    //alarm 1
